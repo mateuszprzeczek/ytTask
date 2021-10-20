@@ -113,7 +113,6 @@ const submit = (e) => {
     let value = input.value;
     const url = extractVideoID(value);
     loadVideo(url);
-    console.log(player.getIframe())
     
 }
 
