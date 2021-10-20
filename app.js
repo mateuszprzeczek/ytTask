@@ -30,9 +30,6 @@ function extractVideoID(url) {
 }
 
 
-
-
-
 // 2. This code loads the IFrame Player API code asynchronously.
 var tag = document.createElement('script');
 
@@ -75,8 +72,6 @@ function onPlayerStateChange(event) {
 
 } else if(event.data === 1) {
     currTime = Math.floor(player.getCurrentTime()) * 1000;
-    console.log('po pauzie', currTime)  
-    console.log('wznowione + getTime ', player.getCurrentTime())
     initCounter = setTimeout(countDown, Math.floor(duration*1000) - 11000 - currTime);
   }
 }
@@ -84,7 +79,6 @@ function onPlayerStateChange(event) {
 function countDown() {
     let timer = 10;
     let flooredDur = duration - Math.floor(currTime / 1000);
-    console.log('duration', duration)
     if(flooredDur < timer) {
         console.log('(duration - Math.floor(currTime / 1000)', Math.floor(flooredDur))
             timer = Math.floor(flooredDur);
@@ -103,9 +97,6 @@ function countDown() {
         timer-=1;
     }, 1000);
 }
-
-
-
 
 function loadVideo(videoID) {
     if(player) { 
