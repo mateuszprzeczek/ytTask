@@ -1,5 +1,6 @@
 #player {
-
+    margin: 0;
+    padding: 0;
 
     position: absolute;
     top: 100px;
@@ -10,8 +11,8 @@
 .count {
     display: none;
     position: relative;
-    top: 70px;
-    left: 0px;
+    top: 11px;
+    left: 1px;
     width: 640px;
     height: 360px;
     background-color: rgba(0, 0, 0, .6);
