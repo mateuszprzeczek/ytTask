@@ -80,7 +80,6 @@ function countDown() {
     let timer = 10;
     let flooredDur = duration - Math.floor(currTime / 1000);
     if(flooredDur < timer) {
-        console.log('(duration - Math.floor(currTime / 1000)', Math.floor(flooredDur))
             timer = Math.floor(flooredDur);
         }
     startCounter = setInterval(() => {
